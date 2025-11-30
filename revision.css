@@ -1,0 +1,22 @@
+.box{
+    height: 200px;
+    width: 300px;
+    background-color: blue;
+    position: relative;
+}
+#box1{
+    width: 100px;
+    background-color: blueviolet;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: scroll;
+
+}
+button{
+    position: sticky;
+    top: 20px;
+    background-color: brown;
+}

@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 191, 255);
+  padding: 20px;
+  align-items: center;
+}
+.logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: white;
+  justify-content: center;
+  align-content: center;
+  padding-left: 11px;
+}
+.logo img {
+  height: 60%;
+  width: 75%;
+}
+
+button {
+  width: 60px;
+  height: 30px;
+  margin-left: 30px;
+  background-color: rgb(8, 126, 161);
+  color: white;
+  border: none;
+}
+button:hover {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+}
+a:hover {
+  color: grey;
+  cursor: pointer;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  background-color: rgb(8, 126, 161);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.home div {
+  margin-bottom: 40px;
+  justify-content: left;
+}
+.welcome p {
+  background-color: red;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+.welcome p a {
+  text-decoration: underline;
+}
+.matric-field {
+  border: 1px solid rgb(194, 190, 190);
+  height: 60px;
+  width: 80%;
+  justify-items: center;
+  align-content: center;
+  padding: 10px;
+  position: relative;
+}
+.matric-field input {
+  margin-left: 40px;
+}
+.matric-field input::placeholder {
+  color: rgb(221, 216, 216);
+}
+
+.matric-field img {
+  position: absolute;
+  top: 17px;
+}
+.home input {
+  background: transparent;
+  border: none;
+  width: 60%;
+  padding: 10px;
+  color: rgb(236, 228, 228);
+}
+.get {
+  font-size: 20px;
+}
+.search {
+  text-align: right;
+  width: 80%;
+  color: rgb(236, 228, 228);
+}
+.category {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(8, 126, 161);
+}
+.category .items {
+  padding: 40px;
+  height: 200px;
+  color: white;
+  align-content: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+span {
+  height: 120px;
+  width: 1px;
+  background-color: rgb(240, 236, 236);
+}
+.options {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  height: 90vh;
+  text-align: left;
+}
+
+/* .options button{
+    justify-self: start;
+} */
+
+.first-option,
+.second-option,
+.third-option {
+  padding: 10px;
+  justify-content: center;
+}
+
+.first-option h3,
+.second-option h3,
+.third-option h3 {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-bottom: 8px;
+}
+
+.first-option p,
+.second-option p,
+.third-option p {
+  margin-bottom: 10px;
+}
+
+.first-option button,
+.second-option button,
+.third-option button {
+  width: 60%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  /* justify-content: left; */
+}
+#phone {
+  margin-bottom: 20px;
+  text-align: left;
+}
+footer{
+    text-align: center;
+    padding: 1rem;
+}
+footer button{
+  padding: 8px;
+  width: 150px;
+  border-radius: 3px;
+}
+
+/* the mobile responsiveness begins here  */
+
+@media (max-width: 600px) {
+  body{
+    height: auto;
+  }
+  .line{
+    display: none;
+  }
+  .category{
+    flex-direction: column;
+  }
+  .options{
+    flex-direction: column;
+  }
+  footer{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+  }
+}
