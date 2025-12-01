@@ -5,16 +5,17 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-html, body{
+html,
+body {
   scroll-behavior: smooth;
   height: 100%;
   margin: 0;
 }
-body{
+body {
   display: flex;
   flex-direction: column;
 }
-.category{
+.category {
   flex: 1;
 }
 header {
@@ -184,13 +185,26 @@ span {
 }
 
 /* the mobile responsiveness begins here  */
- @media (max-width: 600px) {
-
+@media (max-width: 600px) {
   /* Body adjustments for mobile */
   body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* ensures footer stays at bottom */
+  }
+  a{
+    display: inline;
+  }
+  nav{
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+  }
+  nav button{
+    width: 60px;
+    margin-left: 10px;
+    padding: 0;
+    border-radius: 3px;
   }
 
   /* Header and logo resizing */
@@ -246,6 +260,9 @@ span {
   .matric-field input {
     margin-left: 20px;
     width: 11rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .matric-field img {
@@ -254,9 +271,12 @@ span {
   .line {
     display: none;
   }
-  .search{
+  .search {
     font-size: small;
     width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   /* Category adjustments */
@@ -280,20 +300,21 @@ span {
     font-size: small;
     font-weight: lighter;
   }
-  button{
-    display: block;        /* ensure it’s a block element */
-    margin-left: 0;        /* remove any left margin pushing it right */
+  button {
+    display: block; /* ensure it’s a block element */
+    margin-left: 0; /* remove any left margin pushing it right */
     text-align: center;
+    width: 120px;
   }
   /* Footer fix */
   footer {
     margin-top: auto; /* ensures footer stays at bottom on mobile */
     padding: 1rem;
   }
-  footer h2{
+  footer h2 {
     font-size: small;
   }
-  footer button{
+  footer button {
     width: 100px;
     border-radius: 3px;
     margin-top: 10px;
