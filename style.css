@@ -5,8 +5,17 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-html {
+html, body{
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+}
+.category{
+  flex: 1;
 }
 header {
   width: 100%;
@@ -140,10 +149,6 @@ span {
   text-align: left;
 }
 
-/* .options button{
-    justify-self: start;
-} */
-
 .first-option,
 .second-option,
 .third-option {
@@ -177,34 +182,120 @@ span {
   margin-bottom: 20px;
   text-align: left;
 }
-footer{
-    text-align: center;
-    padding: 1rem;
-}
-footer button{
-  padding: 8px;
-  width: 150px;
-  border-radius: 3px;
-}
 
 /* the mobile responsiveness begins here  */
+ @media (max-width: 600px) {
 
-@media (max-width: 600px) {
-  body{
-    height: auto;
+  /* Body adjustments for mobile */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ensures footer stays at bottom */
   }
-  .line{
+
+  /* Header and logo resizing */
+  .logo {
+    height: 30px;
+    width: 30px;
+    padding-left: 6px;
+  }
+
+  .logo img {
+    height: 50%;
+  }
+
+  /* Home section adjustments */
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* don't vertically center, lets content stack naturally */
+    align-items: left;
+    padding: 20px;
+    height: auto; /* let content determine height */
+  }
+
+  .home div {
+    margin-bottom: 20px;
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    width: 100%;
+    height: auto;
+    font-size: xx-small;
+    padding: 5px 0;
+  }
+
+  .welcome p {
+    display: block;
+  }
+
+  .get {
+    font-size: small;
+  }
+
+  /* Matric field resizing */
+  .matric-field {
+    height: 40px;
+    width: 70%;
+    padding: 5px;
+  }
+
+  .matric-field input {
+    margin-left: 20px;
+    width: 11rem;
+  }
+
+  .matric-field img {
+    top: 0.5rem;
+  }
+  .line {
     display: none;
   }
-  .category{
-    flex-direction: column;
+  .search{
+    font-size: small;
+    width: 70%;
   }
-  .options{
+
+  /* Category adjustments */
+  .category {
     flex-direction: column;
+    gap: 10px;
+    padding: 10px;
   }
-  footer{
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
+
+  .category .items {
+    padding: 20px;
+    height: auto; /* allow items to adjust height naturally */
+  }
+
+  /* Options adjustments */
+  .options {
+    flex-direction: column;
+    height: auto; /* let content determine height */
+    gap: 15px;
+    padding: 10px;
+    font-size: small;
+    font-weight: lighter;
+  }
+  button{
+    display: block;        /* ensure it’s a block element */
+    margin-left: 0;        /* remove any left margin pushing it right */
+    text-align: center;
+  }
+  /* Footer fix */
+  footer {
+    margin-top: auto; /* ensures footer stays at bottom on mobile */
+    padding: 1rem;
+  }
+  footer h2{
+    font-size: small;
+  }
+  footer button{
+    width: 100px;
+    border-radius: 3px;
+    margin-top: 10px;
   }
 }
