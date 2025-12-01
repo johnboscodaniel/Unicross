@@ -183,7 +183,7 @@ span {
   margin-bottom: 20px;
   text-align: left;
 }
-/* footer{
+footer{
   text-align: center;
   padding: 1rem;
 }
@@ -191,7 +191,119 @@ footer button{
   width: 150px;
   padding: 8px;
   border-radius: 3px;
-} */
+}
+
+
+/* media query for the table screen size  */
+/* ============== TABLET RESPONSIVENESS ============== */
+@media (min-width: 600px) and (max-width: 900px) {
+
+  /* Header */
+  header {
+    padding: 15px;
+    height: 70px;
+  }
+
+  .logo {
+    height: 45px;
+    width: 45px;
+    padding-left: 8px;
+  }
+
+  .logo img {
+    height: 60%;
+    width: 70%;
+  }
+
+  nav a {
+    margin-left: 20px;
+    font-size: 14px;
+  }
+
+  nav button {
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    margin-left: 20px;
+  }
+
+  /* Home section */
+  .home {
+    height: auto;
+    padding: 40px;
+    justify-content: center;
+  }
+
+  .welcome {
+    font-size: small;
+  }
+
+  .matric-field {
+    width: 60%;
+    height: 50px;
+    padding: 8px;
+  }
+
+  .matric-field input {
+    margin-left: 30px;
+    width: 70%;
+  }
+
+  .search {
+    width: 60%;
+    font-size: medium;
+  }
+
+  /* Category section (tablet keeps items in rows, not column) */
+  .category {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .category .items {
+    padding: 30px;
+    width: 45%;
+    height: auto;
+    text-align: center;
+  }
+
+  span {
+    display: none; /* hide the vertical line on tablet */
+  }
+
+  /* Options section (2-column layout on tablet) */
+  .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+  }
+
+  .options button {
+    width: 80%;
+    margin-left: 0;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center; /* center content on tablet */
+    padding: 1rem;
+  }
+
+  footer h3 {
+    font-size: medium;
+    text-align: center;
+  }
+
+  footer button {
+    width: 150px;
+    padding: 10px;
+  }
+}
+
 
 /* the mobile responsiveness begins here  */
 @media (max-width: 600px) {
@@ -321,12 +433,13 @@ footer button{
   footer {
     margin-top: auto; /* ensures footer stays at bottom on mobile */
     padding: 1rem;
+    text-align: left;
   }
-  footer h2 {
+  footer h3 {
     font-size: small;
+    text-align: left;
   }
   footer button {
-    width: 100px !important;
     border-radius: 3px;
     margin-top: 10px;
   }
