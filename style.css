@@ -183,6 +183,15 @@ span {
   margin-bottom: 20px;
   text-align: left;
 }
+/* footer{
+  text-align: center;
+  padding: 1rem;
+}
+footer button{
+  width: 150px;
+  padding: 8px;
+  border-radius: 3px;
+} */
 
 /* the mobile responsiveness begins here  */
 @media (max-width: 600px) {
@@ -192,15 +201,15 @@ span {
     flex-direction: column;
     min-height: 100vh; /* ensures footer stays at bottom */
   }
-  a{
+  a {
     display: inline;
   }
-  nav{
+  nav {
     display: flex;
     font-size: 10px;
     align-items: center;
   }
-  nav button{
+  nav button {
     width: 60px;
     margin-left: 10px;
     padding: 0;
@@ -244,6 +253,7 @@ span {
 
   .welcome p {
     display: block;
+    white-space: none;
   }
 
   .get {
@@ -267,6 +277,7 @@ span {
 
   .matric-field img {
     top: 0.5rem;
+    z-index: 9999;
   }
   .line {
     display: none;
@@ -315,7 +326,7 @@ span {
     font-size: small;
   }
   footer button {
-    width: 100px;
+    width: 100px !important;
     border-radius: 3px;
     margin-top: 10px;
   }
